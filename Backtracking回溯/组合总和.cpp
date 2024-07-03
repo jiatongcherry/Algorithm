@@ -1,9 +1,9 @@
-//×éºÏ×ÜºÍ£º¸ø¶¨Ò»¸öÎŞÖØ¸´ÔªËØµÄÊı×é candidates ºÍÒ»¸öÄ¿±êÊı target £¬ÕÒ³ö candidates ÖĞËùÓĞ¿ÉÒÔÊ¹Êı×ÖºÍÎª target µÄ×éºÏ¡£candidates ÖĞµÄÊı×Ö¿ÉÒÔÎŞÏŞÖÆÖØ¸´±»Ñ¡È¡¡£
+//ç»„åˆæ€»å’Œï¼šç»™å®šä¸€ä¸ªæ— é‡å¤å…ƒç´ çš„æ•°ç»„ candidates å’Œä¸€ä¸ªç›®æ ‡æ•° target ï¼Œæ‰¾å‡º candidates ä¸­æ‰€æœ‰å¯ä»¥ä½¿æ•°å­—å’Œä¸º target çš„ç»„åˆã€‚candidates ä¸­çš„æ•°å­—å¯ä»¥æ— é™åˆ¶é‡å¤è¢«é€‰å–ã€‚
 //https://leetcode.cn/problems/combination-sum/
 
 /*
-1. µİ¹éreturnÌõ¼ş£ºÃ»ÓĞ±éÀú´ÎÊıµÄÏŞÖÆ£¬Âú×ã×ÜºÍÌõ¼ş¼´¿É·µ»Ø
-2. startIndex£º±ÜÃâÖØ¸´µÄ²ÎÊı ÔÚÍ¬Ò»¼¯ºÏÀïÑ¡ĞèÒª¼Óstartindex£¬²»ÔÚÍ¬Ò»¼¯ºÏÑ¡²»ÓÃ¸Ã²ÎÊı
+1. é€’å½’returnæ¡ä»¶ï¼šæ²¡æœ‰éå†æ¬¡æ•°çš„é™åˆ¶ï¼Œæ»¡è¶³æ€»å’Œæ¡ä»¶å³å¯è¿”å›
+2. startIndexï¼šé¿å…é‡å¤çš„å‚æ•° åœ¨åŒä¸€é›†åˆé‡Œé€‰éœ€è¦åŠ startindexï¼Œä¸åœ¨åŒä¸€é›†åˆé€‰ä¸ç”¨è¯¥å‚æ•°
 */
 
 class Solution {
@@ -38,20 +38,15 @@ public:
     }
 };
 
+// ç»„åˆé—®é¢˜åŠå»é‡çš„ç»¼åˆ
 
-// ×éºÏ×ÜºÍII£º¸ø¶¨Ò»¸öÊı×é candidates ºÍÒ»¸öÄ¿±êÊı target £¬ÕÒ³ö candidates ÖĞËùÓĞ¿ÉÒÔÊ¹Êı×ÖºÍÎª target µÄ×éºÏ¡£candidates ÖĞµÄÃ¿¸öÊı×ÖÔÚÃ¿¸ö×éºÏÖĞÖ»ÄÜÊ¹ÓÃÒ»´Î¡£
+// ç»„åˆæ€»å’ŒIIï¼šç»™å®šä¸€ä¸ªæ•°ç»„ candidates å’Œä¸€ä¸ªç›®æ ‡æ•° target ï¼Œæ‰¾å‡º candidates ä¸­æ‰€æœ‰å¯ä»¥ä½¿æ•°å­—å’Œä¸º target çš„ç»„åˆã€‚candidates ä¸­çš„æ¯ä¸ªæ•°å­—åœ¨æ¯ä¸ªç»„åˆä¸­åªèƒ½ä½¿ç”¨ä¸€æ¬¡ã€‚
 //https://leetcode.cn/problems/combination-sum-ii/
 
 /*
-1. µİ¹éreturnÌõ¼ş£ºÃ»ÓĞ±éÀú´ÎÊıµÄÏŞÖÆ£¬Âú×ã×ÜºÍÌõ¼ş¼´¿É·µ»Ø
-2. startIndex£º±ÜÃâÖØ¸´µÄ²ÎÊı ÔÚÍ¬Ò»¼¯ºÏÀïÑ¡ĞèÒª¼Óstartindex£¬²»ÔÚÍ¬Ò»¼¯ºÏÑ¡²»ÓÃ¸Ã²ÎÊı
-*/
-
-// ×éºÏ×ÜºÍII£º¸ø¶¨Ò»¸öÊı×é candidates ºÍÒ»¸öÄ¿±êÊı target £¬ÕÒ³ö candidates ÖĞËùÓĞ¿ÉÒÔÊ¹Êı×ÖºÍÎª target µÄ×éºÏ¡£candidates ÖĞµÄÃ¿¸öÊı×ÖÔÚÃ¿¸ö×éºÏÖĞÖ»ÄÜÊ¹ÓÃÒ»´Î¡£
-//https://leetcode.cn/problems/combination-sum-ii/
-
-/*
-È¥ÖØ£º½â¼¯²»ÄÜ°üº¬ÖØ¸´µÄ×éºÏ ¡ª¡ª Í¬Ò»Ê÷²ãÈ¥ÖØ Ê¹ÓÃusedÊı×é
+1. é€’å½’returnæ¡ä»¶ï¼šæ²¡æœ‰éå†æ¬¡æ•°çš„é™åˆ¶ï¼Œæ»¡è¶³æ€»å’Œæ¡ä»¶å³å¯è¿”å›
+2. startIndexï¼šé¿å…é‡å¤çš„å‚æ•° åœ¨åŒä¸€é›†åˆé‡Œé€‰éœ€è¦åŠ startindexï¼Œä¸åœ¨åŒä¸€é›†åˆé€‰ä¸ç”¨è¯¥å‚æ•°
+3. å»é‡ï¼šè§£é›†ä¸èƒ½åŒ…å«é‡å¤çš„ç»„åˆ â€”â€” åŒä¸€æ ‘å±‚å»é‡ ä½¿ç”¨usedæ•°ç»„
 */
 
 class Solution {
@@ -71,14 +66,14 @@ private:
 
         for (int i = startindex; i < candidates.size(); i++)
         {
-            //Í¬²ãÈ¥ÖØ
+            //åŒå±‚å»é‡
             if (i > 0 && candidates[i] == candidates[i - 1] && used[i - 1] == false) continue;
 
             sum += candidates[i];
             used[i] = true;
             path.push_back(candidates[i]);
 
-            backtracking(candidates, target, sum, i + 1, used);  //i+1:candidatesÖĞµÄÃ¿¸öÊı×ÖÔÚÃ¿¸ö×éºÏÖĞÖ»ÄÜÊ¹ÓÃ Ò»´Î
+            backtracking(candidates, target, sum, i + 1, used);  //i+1:candidatesä¸­çš„æ¯ä¸ªæ•°å­—åœ¨æ¯ä¸ªç»„åˆä¸­åªèƒ½ä½¿ç”¨ ä¸€æ¬¡
 
             sum -= candidates[i];
             used[i] = false;
