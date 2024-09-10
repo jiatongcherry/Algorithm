@@ -1,7 +1,7 @@
-//·Ö¸î»ØÎÄ´®
+//åˆ†å‰²å›žæ–‡ä¸²
 //https://leetcode.cn/problems/palindrome-partitioning/
 
-//×éºÏÎÊÌâ£¬Ìí¼Ó¶Ô×Ö·û´®ÇÐ¸îµÄ²Ù×÷
+//ç»„åˆé—®é¢˜ï¼Œæ·»åŠ å¯¹å­—ç¬¦ä¸²åˆ‡å‰²çš„æ“ä½œ
 
 class Solution {
 private:
@@ -10,7 +10,7 @@ private:
 
     void backtracking(const string& s, int startindex)
     {
-        //Ò¶×Ó½Úµã
+        //å¶å­èŠ‚ç‚¹
         if (startindex >= s.size())
         {
             result.push_back(path);
@@ -19,12 +19,12 @@ private:
 
         for (int i = startindex; i < s.size(); i++)
         {
-            if (isPalindrome(s, startindex, i)) //¸ù¾ÝstartindexºÍi¿ØÖÆÑ¡ÇøµÄ×Ó´®£¬·ñÔòÐèÒªÏÈÇÐ¸î³ö×Ó´®
+            if (isPalindrome(s, startindex, i)) //æ ¹æ®startindexå’ŒiæŽ§åˆ¶é€‰åŒºçš„å­ä¸²ï¼Œå¦åˆ™éœ€è¦å…ˆåˆ‡å‰²å‡ºå­ä¸²
             {
                 string sub_str = s.substr(startindex, i - startindex + 1);
                 path.push_back(sub_str);
             }
-            else continue;
+            else continue; //å‰ªæžæ“ä½œ
             backtracking(s, i + 1);
             path.pop_back();
         }
