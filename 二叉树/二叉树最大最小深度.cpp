@@ -1,6 +1,7 @@
 /*
 二叉树最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
 二叉树最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+也可以使用迭代法层序遍历，只需要在每次统计size时让depth++即可
 */
 #include <vector>
 #include <string>
