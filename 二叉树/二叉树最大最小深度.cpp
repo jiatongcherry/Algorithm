@@ -1,6 +1,6 @@
 /*
-¶ş²æÊ÷×î´óÉî¶È https://leetcode.cn/problems/maximum-depth-of-binary-tree/
-¶ş²æÊ÷×îĞ¡Éî¶È 
+äºŒå‰æ ‘æœ€å¤§æ·±åº¦ https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+äºŒå‰æ ‘æœ€å°æ·±åº¦ https://leetcode.cn/problems/minimum-depth-of-binary-tree/
 */
 #include <vector>
 #include <string>
@@ -17,16 +17,17 @@ struct TreeNode {
 
 };
 
+//æœ€å¤§æ·±åº¦
 class Solution {
 public:
     int getdepth(TreeNode* node)
     {
-        //µİ¹é
-        //Éî¶È±éÀú ºóĞò±éÀú
+        //é€’å½’
+        //æ·±åº¦éå† ååºéå†
         if (node == NULL) return 0;
         int leftdepth = getdepth(node->left);
         int rightdepth = getdepth(node->right);
-        int depth = max(leftdepth, rightdepth) + 1; //¼ÓrootµÄÉî¶È1
+        int depth = max(leftdepth, rightdepth) + 1; //åŠ rootçš„æ·±åº¦1
         return depth;
     }
     int maxDepth(TreeNode* root) {
@@ -39,8 +40,8 @@ public:
     int result = 0;
     void getdepth(TreeNode* node, int depth)
     {
-        //µİ¹é
-        //Éî¶È±éÀú Ç°Ğò±éÀú ĞèÒª»ØËİ
+        //é€’å½’
+        //æ·±åº¦éå† å‰åºéå† éœ€è¦å›æº¯
         result = max(depth, result);
 
         if (node == NULL) return;
@@ -63,6 +64,27 @@ public:
         if (root == NULL) return 0;
         getdepth(root, 1);
         return result;
+    }
+};
+
+//æœ€å°æ·±åº¦ ååºéå†
+ //æ³¨æ„å¶å­èŠ‚ç‚¹ï¼Œå·¦å³å­©å­éƒ½ä¸ºNULL
+class Solution {
+public:
+    int getdepth(TreeNode* node)
+    {
+        if(node == NULL) return 0;
+       
+        int lefftdepth = getdepth(node->left);
+        int righttdepth = getdepth(node->right);
+        if(node->left==NULL && node->right!=NULL) return righttdepth+1;
+        if(node->left!=NULL && node->right==NULL) return lefftdepth+1;
+
+        int depth = min(lefftdepth, righttdepth) + 1;
+        return depth;
+    }
+    int minDepth(TreeNode* root) {
+        return getdepth(root);
     }
 };
 
